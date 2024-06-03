@@ -1,5 +1,5 @@
 [versions]
-agp = "8.5.0-beta02"
+agp = "8.4.1"
 kotlin = "1.8.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -13,7 +13,6 @@ retrofit = "2.9.0"
 converterGson = "2.9.0"
 mockito = "5.5.0"
 mockk = "1.12.0"
-uiToolingPreviewAndroid = "1.6.7"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }

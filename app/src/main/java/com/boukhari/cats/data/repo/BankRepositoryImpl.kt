@@ -8,7 +8,6 @@ import com.boukhari.cats.domain.model.Account
 import com.boukhari.cats.domain.model.Bank
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import java.io.IOException
 import javax.inject.Named
 
 class BankRepositoryImpl(
@@ -22,7 +21,8 @@ class BankRepositoryImpl(
     override suspend fun fetchBanks() {
         val bankResponses = try {
             banksService.fetchBanks()
-        } catch (e: IOException) {
+        } catch (e: Exception) {
+            // in case of limited connectivity or any other error, we can use the backup service
             banksBackupService.fetchBanks()
         }
 
